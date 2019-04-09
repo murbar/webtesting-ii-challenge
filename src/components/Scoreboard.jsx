@@ -22,13 +22,13 @@ const Scoreboard = ({ data }) => {
   return (
     <Styles>
       <div>
-        Strikes <span>{data.strikes}</span>
+        Strikes <span id="strikes">{data.strikes}</span>
       </div>
       <div>
-        Balls <span>{data.balls}</span>
+        Balls <span id="balls">{data.balls}</span>
       </div>
       <div>
-        Hits <span>{data.hits}</span>
+        Hits <span id="hits">{data.hits}</span>
       </div>
     </Styles>
   );
