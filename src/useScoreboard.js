@@ -11,7 +11,7 @@ const useScoreboard = () => {
     setData(prevData => {
       if (prevData.balls === 3) return { ...prevData, balls: 0 };
 
-      return { ...prevData, ball: prevData.ball + 1 };
+      return { ...prevData, balls: prevData.balls + 1 };
     });
   };
 
