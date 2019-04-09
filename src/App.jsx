@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Scoreboard from './components/Scoreboard';
 import Controls from './components/Controls';
+import useScoreboard from './useScoreboard';
 
 const Styles = styled.div`
   max-width: 40rem;
@@ -13,11 +14,13 @@ const Styles = styled.div`
 `;
 
 const App = () => {
+  const scoreBoard = useScoreboard();
+
   return (
     <Styles>
       <h1>Score Board Control</h1>
-      <Scoreboard />
-      <Controls />
+      <Scoreboard data={scoreBoard.data} />
+      <Controls actions={scoreBoard} />
     </Styles>
   );
 };
